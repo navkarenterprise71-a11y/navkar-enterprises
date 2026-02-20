@@ -1,62 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Navkar Enterprises | Bearing Supplier</title>
+<title>Navkar Enterprises | Premium Bearing Supplier</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-body{
+*{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:#f4f6f9;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    scroll-behavior:smooth;
 }
 
 header{
-    background:#0a1f44;
-    color:white;
-    padding:20px;
-    text-align:center;
+    position:fixed;
+    width:100%;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
 }
 
-nav{
-    background:#132a5e;
-    padding:10px;
-    text-align:center;
+header h1{
+    font-size:22px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
+    margin-left:25px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00f5ff;
 }
 
 section{
-    padding:60px 20px;
+    min-height:100vh;
+    padding:120px 10%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
 }
 
-h2{
-    color:#0a1f44;
+.hero{
+    background:linear-gradient(to right,#0f172a,#1e293b);
+}
+
+.hero h2{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:600px;
+    opacity:0.8;
+}
+
+.rotate{
+    width:200px;
+    margin-top:40px;
+    animation:spin 8s linear infinite;
+}
+
+@keyframes spin{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
 }
 
 .gallery{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    max-width:1200px;
-    margin:auto;
+    gap:25px;
+    width:100%;
 }
 
 .gallery img{
     width:100%;
-    border-radius:10px;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
 }
 
 .brands{
-    background:#0a1f44;
-    color:white;
+    background:#111827;
 }
 
 .whatsapp{
@@ -64,11 +110,12 @@ h2{
     bottom:20px;
     right:20px;
     background:#25D366;
-    color:white;
-    padding:15px 20px;
+    padding:15px 25px;
     border-radius:50px;
     text-decoration:none;
-    font-weight:bold;
+    color:white;
+    font-weight:600;
+    box-shadow:0 0 15px #25D366;
 }
 </style>
 </head>
@@ -77,30 +124,23 @@ h2{
 
 <header>
 <h1>Navkar Enterprises</h1>
-<p>Wholesale Bearing Supplier</p>
-</header>
-
 <nav>
 <a href="#home">Home</a>
-<a href="#about">About</a>
 <a href="#gallery">Gallery</a>
+<a href="#brands">Brands</a>
 <a href="#contact">Contact</a>
 </nav>
+</header>
 
-<section id="home">
-<h2>Premium Quality Industrial Bearings</h2>
-<p>We supply all types of industrial and automotive bearings at competitive market rates with fast dispatch.</p>
-</section>
+<section class="hero" id="home">
+<h2>Premium Industrial Bearings</h2>
+<p>High performance bearings for automotive and industrial applications. Trusted supply. Wholesale pricing. Fast dispatch.</p>
 
-<section id="about">
-<h2>About Us</h2>
-<p>Navkar Enterprises is a trusted bearing supplier dealing in reputed international brands. 
-We provide bulk supply, wholesale pricing and reliable sourcing solutions for industries and hardware traders.</p>
+<img class="rotate" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Ball_bearing.png">
 </section>
 
 <section id="gallery">
-<h2>Our Bearing Gallery</h2>
-
+<h2 style="margin-bottom:50px;">Our Products</h2>
 <div class="gallery">
 
 <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/ball-bearings-1869785_1280.jpg">
@@ -109,17 +149,13 @@ We provide bulk supply, wholesale pricing and reliable sourcing solutions for in
 <img src="https://cdn.pixabay.com/photo/2014/12/21/23/28/ball-bearings-575472_1280.jpg">
 <img src="https://cdn.pixabay.com/photo/2017/06/29/18/47/bearing-2459896_1280.jpg">
 <img src="https://cdn.pixabay.com/photo/2016/11/18/12/54/bearing-1838065_1280.jpg">
-<img src="https://cdn.pixabay.com/photo/2015/09/05/22/46/bearing-924307_1280.jpg">
-<img src="https://cdn.pixabay.com/photo/2018/02/21/18/34/ball-bearings-3170294_1280.jpg">
-<img src="https://cdn.pixabay.com/photo/2017/08/01/00/38/bearing-2569026_1280.jpg">
-<img src="https://cdn.pixabay.com/photo/2016/10/18/21/22/ball-bearing-1750980_1280.jpg">
 
 </div>
 </section>
 
-<section class="brands">
-<h2>Brands We Deal In</h2>
-<p style="font-size:20px;letter-spacing:2px;">
+<section class="brands" id="brands">
+<h2 style="margin-bottom:30px;">Brands We Deal In</h2>
+<p style="font-size:22px;letter-spacing:3px;">
 SKF | NSK | NTN | FAG | KOYO | TIMKEN
 </p>
 </section>
@@ -127,7 +163,7 @@ SKF | NSK | NTN | FAG | KOYO | TIMKEN
 <section id="contact">
 <h2>Contact Us</h2>
 <p>Email: navkarenterprise71@gmail.com</p>
-<p>For bulk inquiries & pricing contact us directly on WhatsApp.</p>
+<p>Bulk orders & pricing inquiries welcome.</p>
 </section>
 
 <a href="https://wa.me/919702624623" class="whatsapp">
